@@ -1,6 +1,43 @@
 # OSCP-cheatsheet
 
 If you get a passable set on the exam, this should have you covered. A lot of it I compiled while working through the labs, some of it is gotcha reminders for myself, and I took whatever I considered useful for myself from this [amazing guide by John Ford on Medium](https://medium.com/@redefiningreality/your-bs-less-guide-to-acing-oscp-4eccaf497410). Keep in mind this doesn't really cover the absolute basics like file transfers or what to do with Mimikatz, crackmapexec/netexec and the like. 
+
+- [Initial scans](#initial-scans)
+    + [MIB Identifiers](#mib-identifiers)
+- [Web](#web)
+- [General Reminders](#general-reminders)
+  * [Reverse Shells](#reverse-shells)
+    + [Powercat](#powercat)
+    + [Stabilise shell](#stabilise-shell)
+  * [HTTP Upload script](#http-upload-script)
+  * [Port Forwarding with Chisel](#port-forwarding-with-chisel)
+- [Active Directory](#active-directory)
+  * [after internal access credentials](#after-internal-access-credentials)
+    + [Roasting](#roasting)
+    + [ldapdomaindump](#ldapdomaindump)
+    + [bloodhound-python](#bloodhound-python)
+  * [Git](#git)
+  * [GodPotato](#godpotato)
+  * [Transfer sam/system/security](#transfer-sam-system-security)
+- [Basic Linux PrivEsc](#basic-linux-privesc)
+  * [SUID file/capability](#suid-file-capability)
+  * [sudo](#sudo)
+  * [processes](#processes)
+  * [Internal services to port forward](#internal-services-to-port-forward)
+  * [cron jobs](#cron-jobs)
+- [Basic Windows PrivEsc](#basic-windows-privesc)
+  * [privileges](#privileges)
+    + [RunAs](#runas)
+    + [UAC Bypass](#uac-bypass)
+  * [PowerShell History](#powershell-history)
+  * [Files](#files)
+  * [Enumeration Scripts](#enumeration-scripts)
+  * [Windows Services](#windows-services)
+    + [Binary Hijacking](#binary-hijacking)
+    + [DLL Hijacking](#dll-hijacking)
+    + [Unquoted Service Paths](#unquoted-service-paths)
+  * [Scheduled Tasks](#scheduled-tasks)
+
 ### Initial scans
 
 ```shell
